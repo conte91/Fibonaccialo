@@ -1,0 +1,7 @@
+This is a style exercise more than an usable piece of software.
+
+Programmaticaly using the Cleverbot service can result in violations of their terms and conditions.
+
+So, feel free to use this software if you wish, but it is YOU OWN RESPONSIBILITY HOW YOU WILL USE IT.
+
+Again, it's neither good nor legal to violate third party terms of service, although it is to write code.

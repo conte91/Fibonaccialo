@@ -1,4 +1,6 @@
 #!/usr/bin/python
+### THIS SOFTWARE IS RELEASED UNDER GPLv3 LICENSE.
+### YOU CAN FIND A COPY OF IT AT http://www.gnu.org/licenses/gpl.html 
 """
 This library lets you open chat session with cleverbot (www.cleverbot.com)
 
