@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 function aspettaMSG(){
   while :
   do
@@ -23,52 +23,16 @@ function aspettaMSG(){
   done
 }
 
-function tieniApertoIlPipe() {
-  echo "Opening $1..."
-  while :
-  do
-    sleep 10000
-  done > "$1"
-}
 MESSAGGIO=""
 DESIREDSENDER=$1
-THEPIPE=/tmp/cleverpipe
-XMPPPIPE=/tmp/xmpplol
-
-echo "Recreating FIFO.."
-rm "$THEPIPE"
-mkfifo "$THEPIPE"
-rm "$XMPPIPE"
-mkfifo "$XMPPIPE"
-echo "Spawning keeper of the Seven Keys.."
-tieniApertoIlPipe $THEPIPE &
-tieniApertoIlPipe $XMPPPIPE &
-echo "Spawning pipe listener.."
-python2 doCleverBot.py &
-echo "Spawning FB writer to chat with $1 ($2@chat.facebook.com).."
-cat "$XMPPPIPE" | sendxmpp "$2"@chat.facebook.com -t -d -i &
-echo "(Waiting..)"
-sleep 5
-echo "Done."
 
 TMPMSGFILE=/tmp/`whoami`.tmp.themsg
 MSGFILE=/tmp/`whoami`.themsg
-REPLYFILE=/tmp/cleverreply
-ACKFILE=/tmp/cleverack
 
-while :
-do
-  aspettaMSG
-  messaggio=`cat $MSGFILE`
-  echo "Received: $messaggio"
-  echo "$messaggio" > $THEPIPE
-  touch "$ACKFILE"
-  while [ -f "$ACKFILE" ] 
-  do
-    sleep 1
-  done
-  risposta=`cat $REPLYFILE`
-  echo "Risposta: $risposta" 
-  echo "$risposta" > "$XMPPPIPE"
-  aspettaMSG
-done
+echo "Enter username:"
+read user
+echo "Enter password:"
+read -s password
+echo "Enter the ID of the person you want to talk to:"
+read name
+./fibo "-$name@chat.facebook.com" "$user" "$password" | python2 doCleverBot.py | sendxmpp -t -i "$name@chat.facebook.com" 
