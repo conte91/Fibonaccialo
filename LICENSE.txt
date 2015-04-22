@@ -1,0 +1,39 @@
+Forked by: none
+Fork Maintainer: Simone Baratta -- Conte91 <at> gmail <dot> com
+Editors: 
+- Simone Baratta -- Conte91 <at> gmail <dot> com
+
+This software is beerware.
+
+If we meet, you owe me a beer. Maybe two. Or even three.
+
+#####################################
+Tl;dr:
+Do what you want. 
+If you want to make money, ask the Fork Mantainer.
+If you fork, keep the licence, become the new fork mantainer and flag the current one into "Forked by".
+#####################################
+
+You can redistribute this software as you want, you can even make money from it if you need, but in this last case you will have to inform the author(s). You will always have to attach this license to the software, to tell others who made it, and to respect the author's name for centuries and centuries.
+
+Less generally speaking, permission is guaranteed to USE and EDIT the software, with the following restrinctions:
+- If you USE the software, you owe the fork maintainer a beer, and it would be nice if you offered a beer to all the editors if you ever meet them;
+- If you USE the software, it would be nice if you sent to all the editors an e-mail with your name and some comments about it;
+- If you EDIT the software, it would be nice to send a patch proposal to all the editors with you new idea; you will have then the right to be added to the "Editors" list, as well as the right not to be added if this is what you desire.
+- If you FORK the project, you shall keep this license into the project; every file which was shipped with the project and has not been completely rewritten shall be redistributed under this license, while new (i.e. written from scratch) source files used within the forked project can be redistributed under the new author's preferred license. Anyway, it would be nice if you kept this license also for new files you create.
+- If you FORK the project, you shall copy the "Fork Maintainer" data of the project you're forking by into the "Forked by" field, and add to it a link or source for the project you forked from. Then you shall edit the Fork Maintainer field with your data. This field can be changed later too if the forked project is abandoned and taken on by someone else.
+- If you FORK the project, it would be nice to offer a beer to the maintainer of the project you forked from every time you are offered a beer for a user of your forked project.
+- If you REDISTRIBUTE the software, you shall keep this license with the software itself and provide the user with a way of getting the source code in a digital format FOR FREE if required. Correct ways include weblinks, cd-roms, magnet links, and every form of common file distribution. It would be nice if you provided the user with the source code without waiting for him to ask for it, attaching it to the distributed software.
+- If you REDISTRIBUTE the software for commercial purposes, you will first have to tell your intention to the fork maintainer (although it would be nicer to tell every editor), and you will have to wait for the maintainer to reply before starting redistributing the software. Note that "tell" does not mean "ask for permissions", i.e. the maintainer nor anyone else has the right not to let you sell this software (as long as you obey the terms of this license). Also, it would be nice if you gave the maintainer a beer, or a little sum of money, each time you gain someting from the sale of this software.
+- If you PUBLISH the software, you shall keep a link to the published fork, and you shall cite the names contained into the "Fork Maintainer" and "Forked by" fields.
+
+Here follows a general terminology explanation in order better to understand this license and its basic ideas:
+- "TO USE" has the meaning of using the software for applicative usage. Quoting fragments of the source code into formal publications is considered a form of usage too, while studying or quoting the source code for academic purposes is not considered usage.
+- "TO REDISTRIBUTE" has the meaning of giving the software to others who will use or redistribute it.
+- "TO EDIT" has the meaning of editing the source code of the software to add or modify its features.
+- "TO FORK" has the meaning of editing the software and publishing or redistributing the modified version in a separate way from the original fork.The person who created the modified version becomes the new FORK MAINTAINER.
+- "TO PUBLISH" means to quote a part or the whole of the source code or of the ideas behind it. Publishing includes quotations for illustrative usage, as well as for formal publications. Examples of publishing include slides about the software structure and things like that. Quoting the front-end of the application (e.g. usage examples, screenshots) is not considered a form of publishing.
+- "SHALL" means "MUST"
+- "IT WOULD BE NICE TO" means "OH, C'MON, IT'S NOT THAT DIFFICULT TO"
+- "RECURSIVE" means "SOMETHING THAT IS DONE RECURSIVELY"
+- "RECURSIVELY" means "IN A RECURSIVE MANNER"
