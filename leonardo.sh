@@ -2,17 +2,17 @@
 function aspettaMSG(){
   while :
   do
-    if ( fbcmd INBOX new |grep -e "snippet" -e "to/from" > $TMPMSGFILE 2>/dev/null)
+    if fbcmd INBOX new |grep -e "snippet" -e "to/from" > "$TMPMSGFILE" 2>/dev/null
     then
       #echo "Received "
       #cat $TMPMSGFILE
       #echo "END."
-      SENDER=`head -n 1 $TMPMSGFILE|sed -e 's:^.*to/from[ \t]*\(.*\)$:\1:g'`
-      MESSAGE=`tail -n 1 $TMPMSGFILE|sed -e 's:^.*snippet[ \t]*\(.*\)$:\1:g'`
+      SENDER=$(sed -e '1 { s:^.*to/from[ \t]*\(.*\)$:\1:g; q; }' "$TMPMSGFILE")
+      MESSAGE=$(sed -ne '$ { s:^.*snippet[ \t]*\(.*\)$:\1:g; p; }' "$TMPMSGFILE")
       if [[ "$SENDER" == "$DESIREDSENDER" ]]
       then
         #echo -n "Received: $MESSAGE"
-        echo $MESSAGE > $MSGFILE
+        echo "$MESSAGE" > "$MSGFILE"
         break
       else
         sleep 1
@@ -32,7 +32,7 @@ MSGFILE=/tmp/`whoami`.themsg
 echo "Enter username:"
 read user
 echo "Enter password:"
-read -s password
+read -rs password
 echo "Enter the ID of the person you want to talk to:"
 read name
 ./fibo "-$name@chat.facebook.com" "$user" "$password" | python2 doCleverBot.py | sendxmpp -t -i "$name@chat.facebook.com" 
