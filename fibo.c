@@ -275,7 +275,7 @@ int main(int argc, char *argv[])
 
 	connect_to_signals();
 
-	PurpleAccount *account = purple_account_new(argv[2], "prpl-jabber"); //this could be prpl-aim, prpl-yahoo, prpl-msn, prpl-icq, etc.
+	PurpleAccount *account = purple_account_new(argv[2], "prpl-facebook"); //this could be prpl-aim, prpl-yahoo, prpl-msn, prpl-icq, etc.
 	purple_account_set_password(account, argv[3]);
 
 	purple_accounts_add(account);
